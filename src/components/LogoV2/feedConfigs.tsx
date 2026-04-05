@@ -18,10 +18,10 @@ export function createRecentActivityFeed(activities: LogOption[]): FeedConfig {
     };
   });
   return {
-    title: 'Recent activity',
+    title: 'JAY activity',
     lines,
     footer: lines.length > 0 ? '/resume for more' : undefined,
-    emptyMessage: 'No recent activity'
+    emptyMessage: 'No JAY activity yet'
   };
 }
 export function createWhatsNewFeed(releaseNotes: string[]): FeedConfig {
@@ -60,14 +60,14 @@ export function createProjectOnboardingFeed(steps: Step[]): FeedConfig {
       text: `${checkmark}${text}`
     };
   });
-  const warningText = getCwd() === homedir() ? 'Note: You have launched claude in your home directory. For the best experience, launch it in a project directory instead.' : undefined;
-  if (warningText) {
+  const warning = getCwd() === homedir() ? 'Tip: Launch DayCode inside a project folder so JAY has better context.' : undefined;
+  if (warning) {
     lines.push({
-      text: warningText
+      text: warning
     });
   }
   return {
-    title: 'Tips for getting started',
+    title: 'JAY quick start',
     lines
   };
 }

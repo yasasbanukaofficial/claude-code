@@ -96,9 +96,9 @@ export function calculateOptimalLeftWidth(
  */
 export function formatWelcomeMessage(username: string | null): string {
   if (!username || username.length > MAX_USERNAME_LENGTH) {
-    return 'Welcome back!'
+    return 'JAY is ready.'
   }
-  return `Welcome back ${username}!`
+  return `JAY is ready, ${username}.`
 }
 
 /**
@@ -255,7 +255,7 @@ export function getLogoDisplayData(): {
     : displayPath
   const billingType = isClaudeAISubscriber()
     ? getSubscriptionName()
-    : 'API Usage Billing'
+    : 'JAY Console'
   const agentName = getInitialSettings().agent
 
   return {

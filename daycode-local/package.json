@@ -1,0 +1,41 @@
+{
+  "name": "daycode-local",
+  "version": "2.1.92",
+  "bin": {
+    "daycode": "daycode.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module",
+  "author": "Local DayCode Build",
+  "license": "SEE LICENSE IN README.md",
+  "description": "Run DayCode, a locally patched terminal coding agent build.",
+  "homepage": "https://github.com/anthropics/claude-code",
+  "bugs": {
+    "url": "https://github.com/anthropics/claude-code/issues"
+  },
+  "scripts": {
+    "prepare": "node -e \"if (!process.env.AUTHORIZED) { console.error('ERROR: Direct publishing is not allowed.\\nPlease see the release workflow documentation to publish this package.'); process.exit(1); }\""
+  },
+  "dependencies": {},
+  "optionalDependencies": {
+    "@img/sharp-darwin-arm64": "^0.34.2",
+    "@img/sharp-darwin-x64": "^0.34.2",
+    "@img/sharp-linux-arm": "^0.34.2",
+    "@img/sharp-linux-arm64": "^0.34.2",
+    "@img/sharp-linux-x64": "^0.34.2",
+    "@img/sharp-linuxmusl-arm64": "^0.34.2",
+    "@img/sharp-linuxmusl-x64": "^0.34.2",
+    "@img/sharp-win32-arm64": "^0.34.2",
+    "@img/sharp-win32-x64": "^0.34.2"
+  },
+  "files": [
+    "cli.js",
+    "daycode.js",
+    "sdk-tools.d.ts",
+    "vendor/ripgrep/",
+    "vendor/audio-capture/",
+    "vendor/seccomp/"
+  ]
+}
